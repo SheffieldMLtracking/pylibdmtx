@@ -160,11 +160,8 @@ def _decode_region(decoder, region, corrections, shrink):
             # Coordinates
             xs = []
             ys = []
-            print("?!?")
-            print(DmtxVector2().X,DmtxVector2().Y,DmtxVector2(0.0,0.0).X,DmtxVector2(0.0,0.0).Y)
             for i,j in [(0.0,0.0), (0.0,1.0), (1.0,0.0), (1.0,1.0)]:
                 p = DmtxVector2(i,j)
-                print(i,j)
                 dmtxMatrix3VMultiplyBy(
                     p,
                     region.contents.fit2raw
